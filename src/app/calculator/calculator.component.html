@@ -1,0 +1,11 @@
+<div>
+    <input type="text" [(ngModel)]="newStudent" placeholder="Student Name"/>
+    <input type="button" value="Add Student" (click)="pushStudent()"/>
+</div>
+<table>
+  <tr><td>Name</td><td>Marks</td></tr>
+  <tr *ngFor="let student of students; let index = index;">
+    <td>{{student.name}}</td>
+    <td><input type="text" [(ngModel)]="student.marks" (keyup)="getTotal()"/></td></tr>
+  <tr><td>Total</td><td>{{total}}</td></tr>
+</table>
