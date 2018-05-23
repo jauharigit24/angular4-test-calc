@@ -1,3 +1,9 @@
-<p>
+<div>
+<p [@myfirstanimation] = "state">
   products works!
 </p>
+<button (click)="animate()">{{state}}</button>
+</div>
+<ul>
+    <li *ngFor="let product of productsList">{{product}}</li>
+</ul>

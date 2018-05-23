@@ -10,6 +10,11 @@ import { RouterModule } from '@angular/router';
 import { ProductsComponent } from './products/products.component';
 import { MembersComponent } from './members/members.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { StudentsService } from './students.service';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +26,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     FormsModule,  
     RouterModule.forRoot([
@@ -38,7 +44,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
       }
     ])
   ],
-  providers: [],
+  providers: [StudentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
